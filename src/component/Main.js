@@ -5,8 +5,8 @@ import ApiCountry from './ApiCountry';
 
 
 const Main =()=>{
-  const API = ()=>{
-    const res = axios.get("https://api.covid19api.com/summary")
+  const API = async ()=>{
+    const res = await axios.get("https://api.covid19api.com/summary")
     return res
   };
   const [country,setCountry] = useState([])

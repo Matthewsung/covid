@@ -8,8 +8,8 @@ const Total = ()=>{
   const [totalDeaths, setTotalDeaths] = useState(0)
   const [newConfirm, setNewConfirm] = useState(0)
   const [newDeaths, setNewDeaths] = useState(0)
-  const API = ()=>{
-    const res = axios.get("https://api.covid19api.com/summary")
+  const API = async ()=>{
+    const res = await axios.get("https://api.covid19api.com/summary")
     return res
   };
   useEffect(()=>{

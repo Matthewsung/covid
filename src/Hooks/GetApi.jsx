@@ -20,8 +20,8 @@ const GetApi = (setCountry,setDate,setTotalConfirm,setTotalDeaths,setNewConfirm,
   //   })
     
   // },[])
-  const API = ()=>{
-    const res = axios.get("https://api.covid19api.com/summary")
+  const API = async ()=>{
+    const res = await axios.get("https://api.covid19api.com/summary")
     return res
   };
   useEffect(()=>{
