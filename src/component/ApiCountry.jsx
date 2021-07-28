@@ -5,7 +5,7 @@ const ApiCountry = ({country})=>{
   return(    
     <li className='country_li' >
       <Link to={{
-        pathname:`/${country.Country}`,
+        pathname:`/covid/${country.Country}`,
         state:{country}
       }} >
        {country.Country}
