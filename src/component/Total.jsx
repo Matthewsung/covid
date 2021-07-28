@@ -31,10 +31,10 @@ const Total = ()=>{
     <>
       <div className='total_box'>
         <h1>기준일 : {date}</h1>
-        <h2>총 확진자수 : {totalConfirm}</h2>
-        <h2>총 사망자수 : {totalDeaths}</h2>
-        <h2>금일 확진자수 : {newConfirm}</h2>
-        <h2>금일 사망자수 : {newDeaths}</h2>
+        <h2>총 확진자수 : {totalConfirm.toLocaleString()}</h2>
+        <h2>총 사망자수 : {totalDeaths.toLocaleString()}</h2>
+        <h2>금일 확진자수 : {newConfirm.toLocaleString()}</h2>
+        <h2>금일 사망자수 : {newDeaths.toLocaleString()}</h2>
       </div>
       
     </>
