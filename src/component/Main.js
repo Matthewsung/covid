@@ -32,9 +32,7 @@ const Main =()=>{
       setNewConfirm(res.NewConfirmed)
       setNewDeaths(res.NewDeaths)
     })
-    
   },[])
-
   const onChangeInput = (e)=>{
     setSearch(e.target.value)
    

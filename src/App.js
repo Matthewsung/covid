@@ -13,7 +13,7 @@ const App= ()=>{
         <Total />
 
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/covid'>
             <Main />
           </Route>
           <Route path='/:country' >

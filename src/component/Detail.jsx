@@ -1,16 +1,18 @@
 import React, { useEffect, useRef, useState ,useParams } from 'react';
 import { useLocation } from 'react-router-dom';
+// import axios from 'axios'
 import Graph from './Graph'
 
 
 const Detail = ()=>{
+
   const choose = useLocation().state.country
   const [country,setCountry] = useState(choose.Country)
   const [newconfirmed,setNewconfirmed] = useState(choose.NewConfirmed)
   const [newdeaths,setNewdeaths] = useState(choose.NewDeaths)
   const [totalconfirmed,setTotalconfirmed] = useState(choose.TotalConfirmed)
   const [totaldeaths,setTotaldeaths] = useState(choose.TotalDeaths)
-  // console.log(choose)
+
   return(
     <div className="w_1440">
       <table>
