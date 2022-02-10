@@ -1,13 +1,19 @@
-import React,{useEffect, useLocation, useState} from 'react';
+import React,{useEffect, useState} from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { Bar,Doughnut, Line } from 'react-chartjs-2';
 
-const Graph = ({data})=>{
-  const countryCode = data.CountryCode.toLowerCase()
+const Graph = (data)=>{
+  const code = useLocation()
+  
+  const [countryData, setCountryData] = useState({})
   const [confirmedData,setConfirmedData]= useState({})
   const [quarantinedData, setQuarantinedData] = useState({})
   const [comparedData, setComparedData] = useState({})
+
   useEffect(()=>{
+    const countryCode = code.state.data.CountryCode
+    setCountryData(code.state.data)
     const fetchEvents = async ()=>{
       const Api = await axios.get(`https://api.covid19api.com/total/dayone/country/${countryCode}`)
       makeData(Api.data)
@@ -77,16 +83,13 @@ const Graph = ({data})=>{
           }
         ]
       })
-      // console.log(arr)
     }
     fetchEvents()
   },[])
 
-console.log(data.Country)
-
   return(
     <section>
-      <h2>{data.Country}의 코로나 현황</h2>
+      <h2>{countryData.Country}의 코로나 현황</h2>
       <div className="contents">
         <div>
           <Bar data={confirmedData} options={

@@ -1,9 +1,9 @@
-import React, {  } from 'react';
+import React from 'react';
 import './App.css';
-import Main from './component/Main';
-import Head from './component/Head'
-import Total from './component/Total';
-import Detail from './component/Detail'
+import Main from './component/Main.tsx';
+import Head from './component/Head.tsx'
+import Total from './component/Total.tsx';
+import Detail from './component/Detail.tsx'
 import {Route,BrowserRouter,Switch} from 'react-router-dom'
 const App= ()=>{
   
